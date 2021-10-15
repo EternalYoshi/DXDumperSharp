@@ -9,6 +9,7 @@ using System.IO;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text.RegularExpressions;
 using System.Reflection;
+using OfficeOpenXml;
 
 namespace DXDumperSharpForms
 {
@@ -18,7 +19,7 @@ namespace DXDumperSharpForms
         //public int linecounter;
         //public string kanachar;
 
-        public static string Decipherer(string v, string tblname, StreamReader srtbl)
+        public static string Decipherer(string v, string tblname, StreamReader srtbl, ExcelWorksheet xlsheet)
         {
 
             string kanachar = "\n";
@@ -33,15 +34,20 @@ namespace DXDumperSharpForms
             {
                 var line = srtbl.ReadLine();
                 if (String.IsNullOrEmpty(line)) continue;
-                if(line.IndexOf(v,StringComparison.CurrentCultureIgnoreCase) >= 0)
+                if (line.IndexOf(v, StringComparison.CurrentCultureIgnoreCase) >= 0)
                 {
                     kanachar = line;
-                    kanachar = kanachar.Remove(0,5);
+                    kanachar = kanachar.Remove(0, 5);
                     srtbl.BaseStream.Position = 0;
 
-                    if(kanachar == "F800")
+                    if (kanachar == "F800")
                     {
                         kanachar = "";
+                    }
+
+                    if (kanachar == "00=")
+                    {
+                        kanachar = "ァ";
                     }
 
                     return kanachar;
@@ -49,7 +55,7 @@ namespace DXDumperSharpForms
                 linecounter++;
             }
             //If the variable is not found in table, it just prints out the word inside brackets instead.
-            if(kanachar == null|| kanachar == "\n")
+            if (kanachar == null || kanachar == "\n")
             {
                 kanachar = " [" + v + "] ";
                 srtbl.BaseStream.Position = 0;

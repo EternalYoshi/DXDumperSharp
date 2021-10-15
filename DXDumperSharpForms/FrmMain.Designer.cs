@@ -62,7 +62,7 @@
             // 
             // btnDump
             // 
-            this.btnDump.Location = new System.Drawing.Point(273, 181);
+            this.btnDump.Location = new System.Drawing.Point(342, 181);
             this.btnDump.Name = "btnDump";
             this.btnDump.Size = new System.Drawing.Size(75, 23);
             this.btnDump.TabIndex = 2;
@@ -73,7 +73,7 @@
             // txtOffsetStart
             // 
             this.txtOffsetStart.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtOffsetStart.Location = new System.Drawing.Point(137, 103);
+            this.txtOffsetStart.Location = new System.Drawing.Point(171, 103);
             this.txtOffsetStart.Name = "txtOffsetStart";
             this.txtOffsetStart.Size = new System.Drawing.Size(100, 20);
             this.txtOffsetStart.TabIndex = 3;
@@ -82,7 +82,7 @@
             // txtOffsetFin
             // 
             this.txtOffsetFin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtOffsetFin.Location = new System.Drawing.Point(137, 138);
+            this.txtOffsetFin.Location = new System.Drawing.Point(171, 138);
             this.txtOffsetFin.Name = "txtOffsetFin";
             this.txtOffsetFin.Size = new System.Drawing.Size(100, 20);
             this.txtOffsetFin.TabIndex = 4;
@@ -114,7 +114,7 @@
             // 
             this.lblOpenedSptFile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblOpenedSptFile.AutoSize = true;
-            this.lblOpenedSptFile.Location = new System.Drawing.Point(134, 22);
+            this.lblOpenedSptFile.Location = new System.Drawing.Point(119, 22);
             this.lblOpenedSptFile.Name = "lblOpenedSptFile";
             this.lblOpenedSptFile.Size = new System.Drawing.Size(130, 13);
             this.lblOpenedSptFile.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             this.lblOpenedTableFile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblOpenedTableFile.AutoSize = true;
-            this.lblOpenedTableFile.Location = new System.Drawing.Point(134, 51);
+            this.lblOpenedTableFile.Location = new System.Drawing.Point(119, 51);
             this.lblOpenedTableFile.Name = "lblOpenedTableFile";
             this.lblOpenedTableFile.Size = new System.Drawing.Size(198, 13);
             this.lblOpenedTableFile.TabIndex = 8;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 216);
+            this.ClientSize = new System.Drawing.Size(429, 216);
             this.Controls.Add(this.lblReminder);
             this.Controls.Add(this.lblOpenedTableFile);
             this.Controls.Add(this.lblOpenedSptFile);
